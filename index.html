@@ -9,16 +9,18 @@
   <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
-  <header>
-    <nav class="header">
+  <header class="header">
+    <div class="overlay fade"></div>
+
+    <nav>
       <a href="#" class="header-logo"><img src="images/logo.svg" alt=""></a>
-      <a href="#" class="header-hamburger">
+      <a id="btnHamburger" href="#" class="header-hamburger hide-desktop">
         <span></span>
         <span></span>
         <span></span>
       </a>
 
-      <div class="header-links">
+      <div class="header-links hide-mobile">
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
@@ -26,8 +28,16 @@
         <a href="#">Careers</a>
       </div>
 
-      <a class="button">Request Invite</a>
+      <a class="button header-cta hide-mobile">Request Invite</a>
     </nav>
+
+    <div class="header-menu fade">
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+      <a href="">Blog</a>
+      <a href="">Careers</a>
+    </div>
   </header>
 
 
