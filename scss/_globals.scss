@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  font-size: $med;
+  font-weight: 300;
+  color: $grayishBlue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.button {
+  position: relative;
+  padding: 1rem 1.75rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 0;
+  color: $white;
+  font-weight: 400;
+  font-size: 14px;
+  background: linear-gradient(to right, $limeGreen, $brightCyan);
+  transition: opacity 0.2s ease-in-out;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+// Visibility
+.hide-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
