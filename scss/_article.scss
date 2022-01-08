@@ -1,6 +1,5 @@
 .articles {
   background-color: $veryLightGray;
-  padding: 2.5rem;
 }
 
 .article {
@@ -59,5 +58,6 @@
 
   &-description {
     font-size: 0.8rem;
+    line-height: 1.3;
   }
 }
